@@ -14,6 +14,8 @@ function triggerSearch(id1, id2, id3){
   var z = document.getElementById(id3);
   var part = document.getElementById('partMenu');
   var part2 = document.getElementById('partMenu2');
+  var part3 = document.getElementById('partMenu3');
+  var part4 = document.getElementById('partMenu4');
   if(x.style.display == "inline-block"){
     x.style.display = "none";
     y.className = "glyphicon glyphicon-search";
@@ -21,6 +23,8 @@ function triggerSearch(id1, id2, id3){
     if (window.innerWidth <= 450) {
       part.style.display = "inline-block";
       part2.style.display = "inline-block";
+      part3.style.display = "inline-block";
+      part4.style.display = "inline-block";
     }
   }
   else {
@@ -30,6 +34,8 @@ function triggerSearch(id1, id2, id3){
     if (window.innerWidth <= 450) {
       part.style.display = "none";
       part2.style.display = "none";
+      part3.style.display = "none";
+      part4.style.display = "none";
     }
   }
 }

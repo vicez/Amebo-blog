@@ -30,11 +30,18 @@ a:hover{
   position: relative;
   z-index: 4;
 }
-.little-menu, .little-menu-real, .little-menu-real2{
+.part-menu, .little-menu, .little-menu-real, .little-menu-real2{
   padding: 15px 0px 0px 10px;
   letter-spacing: .1em;
   display: inline-block;
   cursor: pointer;
+}
+.part-menu{
+  color: grey;
+}
+.little-menu{
+  cursor: text;
+  color: #ba68c8;
 }
 .little-menu-real, .little-menu-real2{
   display: none;
@@ -42,7 +49,6 @@ a:hover{
 .little-menu-icon{
   font-size: 9pt;
   color: grey;
-  display: none;
 }
 .nav-search{
   width: 350px;
@@ -429,7 +435,7 @@ to {width: 180px;}
   .little-nav{height: 35px;}
   .little-menu-real{display: inline-block; padding: 7px 0px 0px 5px;}
   .little-menu-real2{display: none;}
-  .little-menu{font-size: 10pt; letter-spacing: 0em; padding: 7px 0px 0px 3px;}
+  .part-menu, .little-menu{font-size: 10pt; letter-spacing: 0em; padding: 7px 0px 0px 3px;}
   .to-top{width: 40px; height: 40px;}
   .to-top-item1{font-size: 9pt; margin-top: 7px; height: 15px;}
   .content-main-item{height: 420px;}
