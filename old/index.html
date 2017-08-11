@@ -1,0 +1,403 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+  <title> AmeboNation </title>
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="">
+  <meta property="og:keywords" content="">
+  <meta property="og:url" content="">
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="w3.css">
+  <link rel="stylesheet" href="bootstrap-3.3.7/dist/css/bootstrap.min.css">
+  <script src="bootstrap-3.3.7/js/tests/vendor/jquery.min.js"> </script>
+  <script src="bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
+  <script src="amebojs.js"></script>
+  <link rel="stylesheet" href="ameboIndexCss.css">
+  <script type="text/javascript">
+  $(window).scroll(function(e){
+    var $el = $('#littleMenu');
+    var isPositionFixed = ($el.css('position') == 'fixed');
+    if ($(this).scrollTop() > 150 && !isPositionFixed){
+      if ($(window).width() <= 450){
+        $('#littleMenu').css({'position':'fixed','top':'0px','left':'0px'});
+
+      }
+      else if ($(window).width() > 450 && $(window).width() < 800){
+        $('#littleMenu').css({'position':'fixed','top':'0px','left':'0px'});
+        $('#littleMenuReal').css({'display':'inline-block'})
+      }
+      else if ($(window).width() > 800 && $(window).width() < 1000){
+        $('#littleMenu').css({'position':'fixed','top':'0px','left':'5%'});
+        $('#littleMenuReal').css({'display':'inline-block'})
+      }
+      else{
+      $('#littleMenu').css({'position':'fixed','top':'0px','left':'10%'});
+      $('#littleMenuReal').css({'display':'inline-block'});
+    }
+    }
+    if ($(this).scrollTop() < 150 && isPositionFixed){
+      $('#littleMenu').css({'position':'static','top':'0px'});
+      $('#littleMenuReal').css({'display':'none'})
+    }
+    if ($(this).scrollTop() > 500){
+      $('.to-top').css({'display':'block'});
+    }
+    else if ($(this).scrollTop() < 500){
+      $('.to-top').css({'display':'none'});
+    }
+  });
+
+
+  $(window).resize(function(e){
+    var $el = $('#littleMenu');
+    var isPositionFixed = ($el.css('position') == 'fixed');
+    if ($(window).width() <= 780 && isPositionFixed){
+      $('#littleMenu').css({'left':'0px'});
+      if ($(window).width() <= 450){
+        $('#littleMenuReal').css({'display':'none'});
+      }
+    }
+    else if ($(window).width() > 780 && $(window).width() < 980 && isPositionFixed){
+      $('#littleMenu').css({'left':'5%'});
+      $('#littleMenuReal').css({'display':'inline-block'});
+    }
+    else if ($(window).width() > 980 && isPositionFixed){
+      $('#littleMenu').css({'left':'10%'});
+      $('#littleMenuReal').css({'display':'inline-block'});
+    }
+  });
+  </script>
+
+</head>
+
+
+<body>
+  <div class="main-nav" id="top">
+  <div class="main-nav-cover">
+    <div class="menu">
+      <a href="index.html"><span class="menu-item-main"> Home </span> </a>
+      <a href="#"> <span class="menu-item"> Music </span> </a>
+      <a href="#"> <span class="menu-item"> Sport </span> </a>
+      <a href="#"> <span class="menu-item"> Entertainment </span> </a>
+      <a href="#"> <span class="menu-item"> Education </span> </a>
+      <a href="#"> <span class="menu-item"> Politics </span> </a>
+    </div>
+  </div>
+  </div>
+
+  <div id="littleMenu" class="little-nav  pupflav-card">
+
+    <span id="partMenu2" class="little-menu-real" onclick="showMenu('mini-menu')"> &#9776; </span>
+    <span id="littleMenuReal" class="little-menu-real2" onclick="showMenu('mini-menu2')"> &#9776; </span>
+    <div id="mini-menu" class="mini-menu w3-card-2">
+      <a href="#" class="mini-menu-item">Music</a>
+      <a href="#" class="mini-menu-item">Sport</a>
+      <a href="#" class="mini-menu-item">Entertainment</a>
+      <a href="#" class="mini-menu-item">Education</a>
+      <a href="#" class="mini-menu-item">Politics</a>
+    </div>
+    <div id="mini-menu2" class="mini-menu2 w3-card-2">
+      <a href="#" class="mini-menu-item">Music</a>
+      <a href="#" class="mini-menu-item">Sport</a>
+      <a href="#" class="mini-menu-item">Entertainment</a>
+      <a href="#" class="mini-menu-item">Education</a>
+      <a href="#" class="mini-menu-item">Politics</a>
+    </div>
+    <a id="partMenu" href="index.html"> <span class="little-menu"> Home <i class="glyphicon glyphicon-chevron-right little-menu-icon"></i> </span> </a>
+    <button id="searchTrigger" class="nav-search-button" onclick="triggerSearch('searchBox', 'searchIcon', 'searchTrigger')"> <i id="searchIcon" class="glyphicon glyphicon-search"></i> </button>
+    <span id="searchBox" class="search-box">
+    <button class="nav-search-button2"> go </button>
+    <input class="nav-search strech" name="" placeholder="search for post...">
+    <span>
+  </div>
+
+
+  <div class="content">
+
+    <div class="content-main">
+
+      <div class="content-main-item">
+        <a href="#" class="posted-image-container">
+          <img src="images/shrewdz9.jpg" class="posted-image"/>
+          <span class="tag-container"> <span class="tag-item Entertainment"> Entertainment </span> </span>
+        </a>
+        <div class="posted-item">
+          <a href="#"> <span class="posted-title"> &quot;I have no problem with my ex-wife Toyin Aimakhu &quot;  -Adeniyi Johnson </span> </a>
+          <span class="posted-by"> <span class="misc"> by </span> <a href="" class="poster-name"> Amebo </a> <span class="misc"> at </span> <span class="posted-time"> 3/06/2017 </span> </span>
+          <span class="posted-text">The former Minister of Education has reacted to the shooting incident that left many church worshippers dead at the St.
+            Philip...
+          </span>
+          <span class="post-reviews">
+            <span class="review-count"> 44 </span> <span class="misc"> comment(s) </span>
+          </span>
+        </div>
+
+      </div>
+
+      <div class="content-main-item">
+        <a href="#" class="posted-image-container">
+          <img src="images/shrewdz9.jpg" class="posted-image"/>
+          <span class="tag-container"> <span class="tag-item Music"> Music </span> </span>
+        </a>
+        <div class="posted-item">
+          <a href="#"> <span class="posted-title"> &quot;I have no problem with my ex-wife Toyin Aimakhu &quot;  -Adeniyi Johnson </span> </a>
+          <span class="posted-by"> <span class="misc"> by </span> <a href="" class="poster-name"> Amebo </a> <span class="misc"> at </span> <span class="posted-time"> 3/06/2017 </span> </span>
+          <span class="posted-text">The former Minister of Education has reacted to the shooting incident that left many church worshippers dead at the St.
+            Philip...
+          </span>
+          <span class="post-reviews">
+            <span class="review-count"> 44 </span> <span class="misc"> comment(s) </span>
+          </span>
+        </div>
+
+      </div>
+
+      <div class="content-main-item">
+        <a href="#" class="posted-image-container">
+          <img src="images/shrewdz9.jpg" class="posted-image"/>
+          <span class="tag-container"> <span class="tag-item Politics"> Politics </span> </span>
+        </a>
+        <div class="posted-item">
+          <a href="#"> <span class="posted-title"> &quot;I have no problem with my ex-wife Toyin Aimakhu &quot;  -Adeniyi Johnson </span> </a>
+          <span class="posted-by"> <span class="misc"> by </span> <a href="" class="poster-name"> Amebo </a> <span class="misc"> at </span> <span class="posted-time"> 3/06/2017 </span> </span>
+          <span class="posted-text">The former Minister of Education has reacted to the shooting incident that left many church worshippers dead at the St.
+            Philip...
+          </span>
+          <span class="post-reviews">
+            <span class="review-count"> 44 </span> <span class="misc"> comment(s) </span>
+          </span>
+        </div>
+
+      </div>
+
+      <div class="content-main-item">
+        <a href="#" class="posted-image-container">
+          <img src="images/shrewdz9.jpg" class="posted-image"/>
+          <span class="tag-container"> <span class="tag-item Education"> Education </span> </span>
+        </a>
+        <div class="posted-item">
+          <a href="#"> <span class="posted-title"> &quot;I have no problem with my ex-wife Toyin Aimakhu &quot;  -Adeniyi Johnson </span> </a>
+          <span class="posted-by"> <span class="misc"> by </span> <a href="" class="poster-name"> Amebo </a> <span class="misc"> at </span> <span class="posted-time"> 3/06/2017 </span> </span>
+          <span class="posted-text">The former Minister of Education has reacted to the shooting incident that left many church worshippers dead at the St.
+            Philip...
+          </span>
+          <span class="post-reviews">
+            <span class="review-count"> 44 </span> <span class="misc"> comment(s) </span>
+          </span>
+        </div>
+
+      </div>
+
+      <div class="content-main-item">
+        <a href="#" class="posted-image-container">
+          <img src="images/shrewdz9.jpg" class="posted-image"/>
+          <span class="tag-container"> <span class="tag-item Sport"> Sport </span> </span>
+        </a>
+        <div class="posted-item">
+          <a href="#"> <span class="posted-title"> &quot;I have no problem with my ex-wife Toyin Aimakhu &quot;  -Adeniyi Johnson </span> </a>
+          <span class="posted-by"> <span class="misc"> by </span> <a href="" class="poster-name"> Amebo </a> <span class="misc"> at </span> <span class="posted-time"> 3/06/2017 </span> </span>
+          <span class="posted-text">The former Minister of Education has reacted to the shooting incident that left many church worshippers dead at the St.
+            Philip...
+          </span>
+          <span class="post-reviews">
+            <span class="review-count"> 44 </span> <span class="misc"> comment(s) </span>
+          </span>
+        </div>
+
+      </div>
+
+      <div class="content-main-item">
+        <a href="#" class="posted-image-container">
+          <img src="images/shrewdz9.jpg" class="posted-image"/>
+          <span class="tag-container"> <span class="tag-item Entertainment"> Entertainment </span> <span class="tag-item Music"> Music </span> </span>
+        </a>
+        <div class="posted-item">
+          <a href="#"> <span class="posted-title"> &quot;I have no problem with my ex-wife Toyin Aimakhu &quot;  -Adeniyi Johnson </span> </a>
+          <span class="posted-by"> <span class="misc"> by </span> <a href="" class="poster-name"> Amebo </a> <span class="misc"> at </span> <span class="posted-time"> 3/06/2017 </span> </span>
+          <span class="posted-text">The former Minister of Education has reacted to the shooting incident that left many church worshippers dead at the St.
+            Philip...
+          </span>
+          <span class="post-reviews">
+            <span class="review-count"> 44 </span> <span class="misc"> comment(s) </span>
+          </span>
+        </div>
+
+      </div>
+
+      <div class="content-main-item">
+        <a href="#" class="posted-image-container">
+          <img src="images/shrewdz9.jpg" class="posted-image"/>
+          <span class="tag-container"> <span class="tag-item Sport"> Sport </span> <span class="tag-item Politics"> Politics </span> </span>
+        </a>
+        <div class="posted-item">
+          <a href="#"> <span class="posted-title"> &quot;I have no problem with my ex-wife Toyin Aimakhu &quot;  -Adeniyi Johnson </span> </a>
+          <span class="posted-by"> <span class="misc"> by </span> <a href="" class="poster-name"> Amebo </a> <span class="misc"> at </span> <span class="posted-time"> 3/06/2017 </span> </span>
+          <span class="posted-text">The former Minister of Education has reacted to the shooting incident that left many church worshippers dead at the St.
+            Philip...
+          </span>
+          <span class="post-reviews">
+            <span class="review-count"> 44 </span> <span class="misc"> comment(s) </span>
+          </span>
+        </div>
+
+      </div>
+
+      <div class="content-main-item">
+        <a href="#" class="posted-image-container">
+          <img src="images/shrewdz9.jpg" class="posted-image"/>
+          <span class="tag-container"> <span class="tag-item Entertainment"> Entertainment </span> </span>
+        </a>
+        <div class="posted-item">
+          <a href="#"> <span class="posted-title"> &quot;I have no problem with my ex-wife Toyin Aimakhu &quot;  -Adeniyi Johnson </span> </a>
+          <span class="posted-by"> <span class="misc"> by </span> <a href="" class="poster-name"> Amebo </a> <span class="misc"> at </span> <span class="posted-time"> 3/06/2017 </span> </span>
+          <span class="posted-text">The former Minister of Education has reacted to the shooting incident that left many church worshippers dead at the St.
+            Philip...
+          </span>
+          <span class="post-reviews">
+            <span class="review-count"> 44 </span> <span class="misc"> comment(s) </span>
+          </span>
+        </div>
+
+      </div>
+
+      <div class="content-main-item">
+        <a href="#" class="posted-image-container">
+          <img src="images/shrewdz9.jpg" class="posted-image"/>
+          <span class="tag-container"> <span class="tag-item Entertainment"> Entertainment </span> </span>
+        </a>
+        <div class="posted-item">
+          <a href="#"> <span class="posted-title"> &quot;I have no problem with my ex-wife Toyin Aimakhu &quot;  -Adeniyi Johnson </span> </a>
+          <span class="posted-by"> <span class="misc"> by </span> <a href="" class="poster-name"> Amebo </a> <span class="misc"> at </span> <span class="posted-time"> 3/06/2017 </span> </span>
+          <span class="posted-text">The former Minister of Education has reacted to the shooting incident that left many church worshippers dead at the St.
+            Philip...
+          </span>
+          <span class="post-reviews">
+            <span class="review-count"> 44 </span> <span class="misc"> comment(s) </span>
+          </span>
+        </div>
+
+      </div>
+
+      <!-- div to load more -->
+      <div class="load-more">Read more</div>
+
+   </div>
+
+
+
+    <div class="content-two">
+
+      <div class="ads">
+        <div class="ads-header"> Advertise here </div>
+        <div class="ads-body"></div>
+        <div class="ads-body"></div>
+        <div class="ads-body"></div>
+      </div>
+
+      <!-- featured post section -->
+      <div class="featured">
+
+        <div class="featured-header"> Featured posts </div>
+        <div class="featured-body">
+          <a href="#"> <span class="posted-title"> &quot;I have no problem with my ex-wife Toyin Aimakhu &quot;  -Adeniyi Johnson </span> </a>
+          <span class="posted-by"> <span class="misc"> by </span> <a href="" class="poster-name"> Amebo </a> <span class="misc"> at </span> <span class="posted-time"> 3/06/2017 </span> </span>
+          <a href="#" class="featured-image-container">
+            <img src="images/shrewdz9.jpg" class="featured-image"/>
+            <span class="tag-container"> <span class="tag-item Entertainment"> Entertainment </span> </span>
+          </a>
+          <span class="featured-text">The former Minister of Education has reacted to the shooting incident that left many church worshippers dead at the St.
+            Philip...
+          </span>
+          <span class="featured-reviews">
+            <span class="review-count"> 44 </span> <span class="misc"> comment(s) </span>
+          </span>
+        </div>
+
+        <div class="featured-body">
+          <a href="#"> <span class="posted-title"> &quot;I have no problem with my ex-wife Toyin Aimakhu &quot;  -Adeniyi Johnson </span> </a>
+          <span class="posted-by"> <span class="misc"> by </span> <a href="" class="poster-name"> Amebo </a> <span class="misc"> at </span> <span class="posted-time"> 3/06/2017 </span> </span>
+          <a href="#" class="featured-image-container">
+            <img src="images/shrewdz9.jpg" class="featured-image"/>
+            <span class="tag-container"> <span class="tag-item Entertainment"> Entertainment </span> </span>
+          </a>
+          <span class="featured-text">The former Minister of Education has reacted to the shooting incident that left many church worshippers dead at the St.
+            Philip...
+          </span>
+          <span class="featured-reviews">
+            <span class="review-count"> 44 </span> <span class="misc"> comment(s) </span>
+          </span>
+        </div>
+
+
+
+      </div>
+      <!-- end of featured post -->
+
+
+      <!-- random post section -->
+      <div class="radom">
+        <div class="random-header"> Random posts </div>
+
+        <div class="random-body">
+          <a href="#"> <span class="posted-title"> &quot;I have no problem with my ex-wife Toyin Aimakhu &quot;  -Adeniyi Johnson </span> </a>
+          <span class="posted-by"> <span class="misc"> by </span> <a href="" class="poster-name"> Amebo </a> <span class="misc"> at </span> <span class="posted-time"> 3/06/2017 </span> </span>
+          <a href="#" class="featured-image-container">
+            <img src="images/shrewdz9.jpg" class="featured-image"/>
+            <span class="tag-container"> <span class="tag-item Entertainment"> Entertainment </span> </span>
+          </a>
+          <span class="featured-text">The former Minister of Education has reacted to the shooting incident that left many church worshippers dead at the St.
+            Philip...
+          </span>
+          <span class="featured-reviews">
+            <span class="review-count"> 44 </span> <span class="misc"> comment(s) </span>
+          </span>
+        </div>
+
+        <div class="random-body">
+          <a href="#"> <span class="posted-title"> &quot;I have no problem with my ex-wife Toyin Aimakhu &quot;  -Adeniyi Johnson </span> </a>
+          <span class="posted-by"> <span class="misc"> by </span> <a href="" class="poster-name"> Amebo </a> <span class="misc"> at </span> <span class="posted-time"> 3/06/2017 </span> </span>
+          <a href="#" class="featured-image-container">
+            <img src="images/shrewdz9.jpg" class="featured-image"/>
+            <span class="tag-container"> <span class="tag-item Entertainment"> Entertainment </span> </span>
+          </a>
+          <span class="featured-text">The former Minister of Education has reacted to the shooting incident that left many church worshippers dead at the St.
+            Philip...
+          </span>
+          <span class="featured-reviews">
+            <span class="review-count"> 44 </span> <span class="misc"> comment(s) </span>
+          </span>
+        </div>
+
+
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- back to top -->
+  <a href="#top" class="to-top w3-card-2">
+    <span class="glyphicon glyphicon-chevron-up to-top-item1"></span>
+    <span class="to-top-item2"> to top </span>
+  </a>
+
+
+  <footer class="page-footer">
+    <div class="page-footer-cover">
+      <span class="footer-text"> Stay in touch</span>
+      <span class="footer-image">
+        <img class="img-item" src="images/icon/facebook.png">
+        <img class="img-item" src="images/icon/twitter.png">
+        <img class="img-item" src="images/icon/google.png">
+      </span>
+      <a href="#" class="last-text"> About us </a>
+      <a href="#" class="last-text"> Contact us </a>
+      <span class="last-text-real"> <i class="fa fa-copyright"></i> copyright AmeboNation 2017 </span>
+    </div>
+  </footer>
+
+</body>
+
+
+
+</html>
